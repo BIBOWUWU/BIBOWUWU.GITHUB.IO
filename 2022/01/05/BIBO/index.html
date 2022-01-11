@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>博客 | DANTAXIYOU</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客搭建及Markdown文档编写">
+  <meta name="description" content="博客搭建及文章发布">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客">
 <meta property="og:url" content="http://example.com/2022/01/05/BIBO/index.html">
 <meta property="og:site_name" content="DANTAXIYOU">
-<meta property="og:description" content="博客搭建及Markdown文档编写">
+<meta property="og:description" content="博客搭建及文章发布">
 <meta property="og:locale">
 <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjJPnjhU2JtKMwXBLUAQPZotgdj269NsfXQ&usqp=CAU">
 <meta property="article:published_time" content="2022-01-05T12:23:53.000Z">
-<meta property="article:modified_time" content="2022-01-10T15:32:49.761Z">
+<meta property="article:modified_time" content="2022-01-11T13:07:42.836Z">
 <meta property="article:author" content="BIBO">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -73,15 +73,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">innerArchive</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">friends</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">aboutme</a>
     			
             
 		</nav>
@@ -208,52 +208,119 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="博客搭建及Markdown文档编写"><a href="#博客搭建及Markdown文档编写" class="headerlink" title="博客搭建及Markdown文档编写"></a>博客搭建及Markdown文档编写</h1><span id="more"></span> 
-<blockquote>
-<p>博客的搭建 </p>
+        <h1 id="博客搭建及文章发布"><a href="#博客搭建及文章发布" class="headerlink" title="博客搭建及文章发布"></a>博客搭建及文章发布</h1><span id="more"></span> 
+<h2 id="博客的搭建"><a href="#博客的搭建" class="headerlink" title="博客的搭建"></a>博客的搭建</h2><p>具体教程：</p>
+<ul>
+<li>[bilibili教学视频](<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n?share_source=copy_web%EF%BC%89">https://www.bilibili.com/video/BV1mU4y1j72n?share_source=copy_web）</a> </li>
+</ul>
+<p>大致流程如下：</p>
+<ol>
+<li>下载相关工具</li>
+<li>注册gtihub并搭建一个仓库 </li>
+<li>生成SSH Keys </li>
+<li>本地生成博客内容 </li>
+<li>发布博客到互联网 </li>
+</ol>
+<ul>
+<li>注意如果输入 hexo d 出现以下错误：</li>
+</ul>
+<p>fatal: unable to auto-detect email address (got ‘z@DESKTOP-DPE3A08.(none)’)<br>error: src refspec HEAD does not match any<br>error: failed to push some refs to ‘<a target="_blank" rel="noopener" href="https://github.com/seekwhale13/seekwhale13.ithub.io.git&#39;%E5%8F%AF%E4%BB%A5%E5%85%88%E9%94%AE%E5%85%A5%EF%BC%9A">https://github.com/seekwhale13/seekwhale13.ithub.io.git&#39;可以先键入：</a></p>
+<pre><code> git config --global user.email &quot;你的邮箱&quot; 
+
+ git config --global user.name &quot;你的gihub名字&quot; 
+</code></pre>
+<p>例如：</p>
+<pre><code>git config --global user.email &quot;123456789@163.com&quot;
+git config --global user.name &quot;ha135712345&quot;​
+</code></pre>
+<p>然后hexo clean,hexo g,hexo d</p>
+<h2 id="文章发布"><a href="#文章发布" class="headerlink" title="文章发布"></a>文章发布</h2><blockquote>
+<p>生成本地文档 </p>
 </blockquote>
-<p>[bilibili教学视频](<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n?share_source=copy_web%EF%BC%89">https://www.bilibili.com/video/BV1mU4y1j72n?share_source=copy_web）</a> </p>
-<h2 id="Markdown文档编写"><a href="#Markdown文档编写" class="headerlink" title="Markdown文档编写"></a>Markdown文档编写</h2><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用标题时需要#号 (后面注意要加空格)</p>
+<p>在blog文档下git bash，输入 </p>
+<pre><code>    hexo new &quot;新文档名称&quot; 
+</code></pre>
+<p>例如 </p>
+<pre><code>    hexo new &quot;我的第一篇博客&quot; 
+</code></pre>
+<p> 在 Biog\source_posts 处可以看到刚刚生成的文档 </p>
+<blockquote>
+<p>编写内容 </p>
+</blockquote>
+<p> 打开刚刚生成的文档（这里用的是Visual Studio Code，可自行去浏览器下载）</p>
+<p> 按住ctrl+shift+p打开命令面板，输入markdown打开侧边预览，这样就可以直接看到内容了 </p>
+<blockquote>
+<p>markdown文档编写 </p>
+</blockquote>
+<p>文章的编写需要注意以下规则 </p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用标题时需要#号 (后面注意要加空格)</p>
 <p>一到六级标题分别为#~######  </p>
+<pre><code>一级标题   # 标题 
+二级标题   ## 标题 
+三级标题   ### 标题 
+四级标题   #### 标题  
+.......   ............
+</code></pre>
 <h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>Markdown划分段落非常简单，就是在段落前后保留一个空行即可，例如： </p>
-<p>第一段    </p>
-<p>第二段   </p>
+<pre><code> 第一段    
+ 空行
+ 第二段   
+</code></pre>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>如果我们需要对一段内容进行强调显示时，Markdown提供了一个特殊符号&gt;(&gt;和内容之前需要空一个空格)用于段落区块引用：</p>
 <blockquote>
 <p>引用段,将会被高亮显示 </p>
 </blockquote>
-<h3 id="Markdown支持同时强调引用多个段落，可以按照如下方式书写："><a href="#Markdown支持同时强调引用多个段落，可以按照如下方式书写：" class="headerlink" title="Markdown支持同时强调引用多个段落，可以按照如下方式书写："></a>Markdown支持同时强调引用多个段落，可以按照如下方式书写：</h3><p>“&gt;”这是一段引用段落，将会被高亮显示 </p>
-<p>“&gt;” </p>
-<p>“&gt;”这也是一段引用段落，也会被高亮显示 (去掉””)</p>
-<blockquote>
-<p>这是一段引用段落，将会被高亮显示 </p>
-<p>这也是一段引用段落，也会被高亮显示 </p>
-</blockquote>
+<h3 id="Markdown支持同时强调引用多个段落，可以按照如下方式书写："><a href="#Markdown支持同时强调引用多个段落，可以按照如下方式书写：" class="headerlink" title="Markdown支持同时强调引用多个段落，可以按照如下方式书写："></a>Markdown支持同时强调引用多个段落，可以按照如下方式书写：</h3><pre><code> &gt;这是一段引用段落，将会被高亮显示 
+
+ &gt; 
+
+ &gt;这也是一段引用段落，也会被高亮显示 
+</code></pre>
 <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>[超链接显示文字] (网址) </p>
-<p><a target="_blank" rel="noopener" href="https://bibowuwu.github.io/">BIBOWUWU博客</a> </p>
+<pre><code>[BIBOWUWU博客](https://bibowuwu.github.io/) 
+</code></pre>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>图片和超链接的唯一区别就是在最前方添加一个感叹号 </p>
-<p>![图片名称] (图片地址) </p>
+<pre><code> ![图片名称] (图片地址) 
+</code></pre>
 <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjJPnjhU2JtKMwXBLUAQPZotgdj269NsfXQ&usqp=CAU" alt="可爱猫猫"> </p>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表使用<em>、+、-标识，但是一般使用</em>来标识无序列表</p>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表使用 * 、+、-标识，但是一般使用 * 来标识无序列表</p>
 <p>单级列表从最左开始(适用于无序列表) </p>
+<pre><code>* 无序列表 
+* 无序列表 
+* 无序列表 
+</code></pre>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>有序列表使用数字.标识 </p>
+<pre><code>1. 有序列表 
+2. 有序列表 
+3. 有序列表 
+</code></pre>
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>大于三个的 “*” 或 “-“ </p>
+<pre><code> ---- 
+ ***
+ ----
+</code></pre>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><pre><code>&quot; * 这里包含斜体内容 * &quot;
+
+&quot; ** 这里包含加粗内容 **&quot; 
+
+*这里包含斜体内容* 
+
+**这里包含加粗内容** 
+</code></pre>
+<p>当编写完后按ctrl+s 保存 </p>
 <ul>
-<li>无序列表 </li>
-<li>无序列表 </li>
-<li>无序列表 <h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2>有序列表使用数字.标识 </li>
+<li>具体编写规则<a target="_blank" rel="noopener" href="https://blog.csdn.net/sanallen/article/details/92081911">链接地址</a> <blockquote>
+<p>上传文章 </p>
+</blockquote>
+</li>
 </ul>
-<ol>
-<li>有序列表 </li>
-<li>有序列表 </li>
-<li>有序列表 <h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2>大于三个的 “*” 或 “-“ </li>
-</ol>
-<hr>
-<hr>
-<hr>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>“ * 这里包含斜体内容 * “</p>
-<p>“ ** 这里包含加粗内容 **” </p>
-<p><em>这里包含斜体内容</em> </p>
-<p><strong>这里包含加粗内容</strong> </p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/sanallen/article/details/92081911">https://blog.csdn.net/sanallen/article/details/92081911</a></p>
+<p>到blog文档下git bash 依次输入</p>
+<pre><code> hexo clean, hexo g, hexo s 
+</code></pre>
+<p> 打开浏览器输入<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 查看本地生成的内容，无误后输入 </p>
+<pre><code>hexo d 
+</code></pre>
+<p>上传到github ，成功后就可以在自己的博客中看到自己的文章了</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1301437567&auto=0&height=66"></iframe>  
 
       
@@ -268,7 +335,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢投喂呀OvO<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>阿里嘎多OvO<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
@@ -393,7 +460,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8AMarkdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99"><span class="toc-number">1.</span> <span class="toc-text">博客搭建及Markdown文档编写</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99"><span class="toc-number">1.1.</span> <span class="toc-text">Markdown文档编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">1.3.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">区块引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown%E6%94%AF%E6%8C%81%E5%90%8C%E6%97%B6%E5%BC%BA%E8%B0%83%E5%BC%95%E7%94%A8%E5%A4%9A%E4%B8%AA%E6%AE%B5%E8%90%BD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8C%89%E7%85%A7%E5%A6%82%E4%B8%8B%E6%96%B9%E5%BC%8F%E4%B9%A6%E5%86%99%EF%BC%9A"><span class="toc-number">1.4.1.</span> <span class="toc-text">Markdown支持同时强调引用多个段落，可以按照如下方式书写：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.5.</span> <span class="toc-text">超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.6.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">1.7.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">1.8.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="toc-number">1.9.</span> <span class="toc-text">分隔线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">1.10.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5"><span class="toc-number">1.11.</span> <span class="toc-text">原文链接</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83"><span class="toc-number">1.</span> <span class="toc-text">博客搭建及文章发布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">博客的搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83"><span class="toc-number">1.2.</span> <span class="toc-text">文章发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">1.4.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">1.5.</span> <span class="toc-text">区块引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown%E6%94%AF%E6%8C%81%E5%90%8C%E6%97%B6%E5%BC%BA%E8%B0%83%E5%BC%95%E7%94%A8%E5%A4%9A%E4%B8%AA%E6%AE%B5%E8%90%BD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8C%89%E7%85%A7%E5%A6%82%E4%B8%8B%E6%96%B9%E5%BC%8F%E4%B9%A6%E5%86%99%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">Markdown支持同时强调引用多个段落，可以按照如下方式书写：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.6.</span> <span class="toc-text">超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.7.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">1.8.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">1.9.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="toc-number">1.10.</span> <span class="toc-text">分隔线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">1.11.</span> <span class="toc-text">字体</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -436,10 +503,7 @@
 
 
  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
- </script>
-
-
-# PV方式，单个用户连续点击 n 篇，记录 n 次记录值
+ </script># PV方式，单个用户连续点击 n 篇，记录 n 次记录值
 <span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 
 # UV方式，单个用户连续点击 n 篇，记录 1 次记录值
@@ -493,15 +557,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">innerArchive</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">friends</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">aboutme</a></li>
       
         
     </ul>
